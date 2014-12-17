@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>rknoll spreeboot</title>
+        <meta charset="utf-8"/>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script type="text/javascript">
+
+        </script>
+
+    </head>
+
+<body>
+
+    <!-- alle Boote/ruderer werden hier abgebildet -->
+    <canvas id="Canvas" width="300" height="100"></canvas>
+    
+    <!-- Hier wetden alle Templates "eingesetzt" -->
+    <div id="gameArea"></div>
+
+    <!-- wird bei Aufruf der Url angezeigt - Entscheidung Host/Player -->
+    <script id="intro-screen-template" type="text/template">
+        <div id="wrapintro">
+            <div class="row row2">
+                <div class="col-md-6"><button id="btnNeuesSpiel" class="btn btn-primary btn-block btn-lg raff2">Neues Spiel</button>
+                </div>
+                <div class="col-md-6"><button id="btnNeuerSpieler" class="btn btn-primary btn-block btn-lg raff2">Neuer Spieler</button>
+                </div>
+            </div>
+            <div id="neuesSpiel">
+                Starte ein neues Spiel (nur Host Bildschirm)
+            </div>
+            <div id="neuerSpieler">
+                Registriere dich als neuer Spieler für ein Spiel
+            </div>
+        </div>
+    </script>
+
+    <!-- wird auf dem HostScreen dargestellt -  mit evtl Fehlermedelung -->
+    <script id="create-game-template" type="text/template">
+        <div id="wrap">
+        <marquee behavior="alternate"  scrollamount="1"><div id="gameURL" class="title">Zu schnell! Bitte aktualisieren drücken.</div></marquee>
+        </div>
+    </script>
+
+    <!-- wird dem Neuen Spieler angezeigt - Inputfelder übermitteln die erforderlichen Daten-->
+    <script id="join-game-template" type="text/template">
+        <div class="row">
+            <div class="col-md-12">
+                <input id="inputPlayerName" type="text" placeholder="Dein Name:"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input id="inputGameId" type="text" placeholder="Game ID:"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button id="btnStart" type="button" class="btn btn-primary btn-block btn-lg raff2">
+                            Start
+                </button>
+            </div>
+        </div>
+    </script>
+
+    <!-- Spielerinterface -->
+    <script id="input-device-template" type="text/template">
+        <div class="row">
+            <div class="col-xs-4  col-xs-offset-4">
+                <button id="hoch" type="button" class="btn btn-primary btn-block btn-lg raff2">
+                    <span class="glyphicon glyphicon-circle-arrow-up"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4"><button id="links" type="button" class="btn btn-primary btn-block btn-lg raff"><span class="glyphicon glyphicon-circle-arrow-left"></span></button>
+            </div>
+            <div class="col-xs-4  col-xs-offset-4"><button id="rechts" type="button" class="btn btn-primary btn-block btn-lg raff"><span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4  col-xs-offset-4">
+                <button id="runter" type="button" class="btn btn-primary btn-block btn-lg raff">
+                    <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                </button>
+            </div>
+        </div>
+    </script>
+
+    <!-- wird auf dem Hostscreen angezeigt - samt dem Namen des Gewinners -->
+    <script id="gameOver-template" type="text/template">
+            <div id="wrap"> 
+            <div class="gameOver"><h1>GAME OVER</h1></br><div id="hatGewonnen"></div></div>
+            </div>
+    </script>
+
+    <!-- wird dem Gewinner angezeigt -->
+    <script id="gewonnen-template" type="text/template">
+       <h1> GEWONNEN! </h1>
+    </script>
+
+    <!-- wird dem Verlierer angezeigt -->
+    <script id="verloren-template" type="text/template">
+       <h1> VERLOREN! </h1>
+    </script>
+
+    
+
+
+    
+
+  
+    
+
+    <!-- If Socket.IO is used with Express, then the /socket.io/ path will
+        serve the proper Socket.IO javascript files used by the browser -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- app.js is where all the client-side Anagrammatix game logic -->
+    <script src="client.js"></script>
+
+
+</body>
+</html>
+<!--rknoll-->

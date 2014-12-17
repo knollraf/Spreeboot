@@ -1,0 +1,103 @@
+/* Positioniert die Canvas (für den HostPC optimiert) */
+#Canvas{
+	position:absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 50%;
+	margin-top: -106px;
+	z-index: -5;
+}
+
+/* Positionierung der gameArea (für den HostPC optimiert) */
+#gameArea{
+	position:absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 50%;
+	margin-top: -106px;
+	width: 300px;
+}
+
+/* optimiert die Positioinerung der Richtungstasten */
+.raff {
+	margin-top: 10px;
+
+/* optimiert die Positioinerung der Startbuttons */
+}
+.raff2 {
+	margin-top: 18px;
+
+}
+
+/* optimierung der row */
+.row {
+ 	margin-left: 0px; 
+ 	margin-right: 0px; 
+}
+
+/* max breite der Button*/
+.row2 {
+	width: 300px;
+}
+
+/* Optimierung Formular */
+#inputPlayerName {
+	margin-top: 50px;
+	width: 100%;
+	border-radius: 6px;
+	height: 46px;
+	border: 1px solid #ccc;
+	padding-left: 20px;
+}
+#inputGameId {
+	margin-top: 10px;
+	width: 100%;
+	border-radius: 6px;
+	height: 46px;
+	border: 1px solid #ccc;
+	padding-left: 20px;
+}
+
+/* Anpassung des Gameoverscreens */
+.gameOver{
+	position: absolute;
+	background-color: white;
+	font-family: 'Quicksand', sans-serif;
+	width: 300px;
+	height: 100px;
+}
+
+/*Dimensionsanpassung create-game-template */
+#wrap{
+	width: 300px;
+	height: 100px;
+}
+
+/*Dimensionsanpassung intro-screen-template */
+#wrapintro{
+	background-color: white;
+	width: 300px;
+	height: 100px;
+}
+
+/* h1 verändert */
+h1{	
+	font-family: 'Quicksand', sans-serif;
+	margin-bottom: -17px;
+}
+
+/* Anpassung der Button Erklärung auf dem intro-screen-template */
+#neuesSpiel{
+	float: left;
+	width: 120px;
+	font-size: 9px;
+	margin-left: 20px;
+}
+#neuerSpieler{
+	float: right;
+	width: 120px;
+	font-size: 9px;
+	margin-right: 8px;
+}
+
+/*rknoll*/
